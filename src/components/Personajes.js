@@ -11,14 +11,14 @@ export default class Personajes extends Component {
     <div>
       <h2>Personajes</h2>
       <div className="row">
-        {personajes.map(eq => (
-          <div className="col-md-4 mb-3" key={eq.id || eq.IdPersonaje || eq.Id}>
+        {personajes.map(pe => (
+          <div className="col-md-4 mb-3" key={pe.id || pe.IdPersonaje || pe.Id}>
             <div className="card">
-              { (eq.foto || eq.Imagen) && <img src={eq.foto || eq.Imagen} className="card-img-top" alt=""/> }
+              { (pe.foto || pe.Imagen) && <img src={pe.foto || pe.Imagen} className="card-img-top" alt=""/> }
               <div className="card-body">
-                <h5 className="card-title">{eq.nombre || eq.Nombre || eq.Descripcion}</h5>
-                <Link className="btn btn-primary me-2" to={`/personajes/${eq.id || eq.IdPersonajes || eq.Id}`}>Ver Personaje</Link>
-                <Link className="btn btn-secondary" to={`/personajes/${eq.id || eq.IdPersonaje || eq.Id}/series`}>personajes</Link>
+                <h5 className="card-title">{pe.nombre || pe.Nombre || pe.Descripcion}</h5>
+                <Link className="btn btn-primary me-2" to={`/personajes/${pe.id || pe.IdPersonajes || pe.Id}`}>Ver Personaje</Link>
+                <Link className="btn btn-secondary" to={`/personajes/${pe.id || pe.IdPersonaje || pe.Id}/series`}>personajes</Link>
               </div>
             </div>
           </div>

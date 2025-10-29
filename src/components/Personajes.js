@@ -7,8 +7,7 @@ export default class Personajes extends Component {
     useEffect(()=>{
         API.getPersonajes().then(r=>setPersonajes(r.data)).catch(()=>setPersonajes([]));
     },[]);
-
-
+    
   return (
     <div>
       <h2>Personajes</h2>
